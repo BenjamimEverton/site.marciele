@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navBar {
+    height: 100px;
+    background: linear-gradient(to bottom right, rgb(230, 174, 174), rgb(240, 146, 146));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    flex: 20%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.logo h1 {
+    font-family: "Playfair Display", serif;
+    color: white;
+    font-size: 36px;
+    font-weight: 900; /* Corrigido para 900 */
+    text-shadow: 1px 1px 3px;
+}
+
+.menu {
+    flex: 70%;
+    text-align: right;
+    padding: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 15px;
+}
+
+.menu a:hover {
+    color: #0f0f0f;
+    border-top: 4px solid #FA8072;
+}
+
+#botao {
+    background: #FA8072;
+    padding: 10px 25px;
+    border-radius: 15px;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+#botao:hover { /* Corrigido o seletor */
+    border: none;
+    background: #FA8072;
+}
+
+.corpo {
+    height: 700px;
+    background: linear-gradient(to bottom right, rgb(247, 192, 192), rgb(240, 130, 130));
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.corpinho {
+    margin-top: 1%;
+    margin-left: 10%;
+    flex: 40%;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    color: #FA8072;
+    background: linear-gradient(to bottom left, white, rgb(243, 234, 234));
+}
+
+.corpinho h2 {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.img-corpinho {
+    margin-top: 1%;
+    margin-right: 10%;
+    flex: 40%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.p {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+.sobre {
+    height: 700px;
+    background: linear-gradient(to bottom right, rgb(247, 192, 192), rgb(240, 130, 130));
+}
+
+.contato {
+    height: 700px;
+    background: linear-gradient(to bottom right, rgb(247, 192, 192), rgb(240, 130, 130));
+}
+
+section {
+    margin-top: 80px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: inline-block;
+    height: 400px;
+}
+
+section h1 {
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    color: #FA8072;
+}
+
+section p {
+    width: 100%;
+    font-size: 25px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    color: #f0dedb;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titulo {
+    width: 100%;
+    font-size: 75px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    color: #f7695a;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.descricao {
+    width: 100%;
+    font-size: 30px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    color: #f1e6e5;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+.insta-btn {
+    display: inline-block;
+    background-color: #ec44bf;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.insta-btn:hover {
+    background-color: #f132be;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .logo {
+        flex: 30%; /* Ajusta o logo em telas menores */
+        margin-left: 5%;
+    }
+
+    .menu {
+        flex: 70%;
+    }
+
+    .corpo {
+        flex-direction: column; /* Muda a direção do layout */
+    }
+
+    .corpinho, .img-corpinho {
+        flex: 100%; /* Faz com que cada bloco ocupe toda a largura */
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-right: 0; /* Remove a margem direita */
+    }
+
+    section {
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column; /* Muda a direção do layout da navbar */
+    }
+
+    .menu {
+        text-align: center; /* Centraliza os itens do menu */
+    }
+
+    .logo {
+        margin-left: 0; /* Remove a margem esquerda no logo */
+    }
+
+    section {
+        margin-left: 2%; /* Ajusta as margens em telas menores */
+        margin-right: 2%;
+    }
+
+    .titulo {
+        font-size: 50px; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .descricao {
+        font-size: 25px; /* Reduz o tamanho da fonte em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 16px; /* Reduz o tamanho da fonte dos links do menu */
+        padding: 15px 10px; /* Ajusta o padding */
+    }
+
+    .logo h1 {
+        font-size: 28px; /* Reduz o tamanho da fonte do logo */
+    }
+
+    .corpinho h2 {
+        font-size: 30px; /* Reduz o tamanho do h2 */
+    }
+
+    .p {
+        font-size: 20px; /* Reduz o tamanho do texto parágrafo */
+    }
+
+    .whatsapp-btn, .insta-btn {
+        font-size: 16px; /* Reduz o tamanho da fonte dos botões */
+        padding: 8px 15px; /* Ajusta o padding */
+    }
+}
