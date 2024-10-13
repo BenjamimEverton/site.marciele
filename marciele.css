@@ -28,7 +28,7 @@ body {
     font-family: "Playfair Display", serif;
     color: white;
     font-size: 36px;
-    font-weight: 900; 
+    font-weight: 900; /* Corrigido para 900 */
     text-shadow: 1px 1px 3px;
 }
 
@@ -58,13 +58,13 @@ body {
     margin-left: 5%;
 }
 
-#botao:hover {
+#botao:hover { /* Corrigido o seletor */
     border: none;
     background: #FA8072;
 }
 
 .corpo {
-    height: 700px;
+    height: auto; /* Ajustado para auto */
     background: linear-gradient(to bottom right, rgb(247, 192, 192), rgb(240, 130, 130));
     display: flex;
     flex-direction: row;
@@ -82,7 +82,6 @@ body {
     text-align: center;
     font-family: "Playfair Display", serif;
     color: #FA8072;
-    background: linear-gradient(to bottom left, white, rgb(243, 234, 234));
 }
 
 .corpinho h2 {
@@ -104,7 +103,12 @@ body {
     font-size: 25px;
 }
 
-.sobre, .contato {
+.sobre {
+    height: 700px;
+    background: linear-gradient(to bottom right, rgb(247, 192, 192), rgb(240, 130, 130));
+}
+
+.contato {
     height: 700px;
     background: linear-gradient(to bottom right, rgb(247, 192, 192), rgb(240, 130, 130));
 }
@@ -114,7 +118,7 @@ section {
     margin-left: 5%;
     margin-right: 5%;
     display: inline-block;
-    height: 400px;
+    height: auto; /* Ajustado para auto */
 }
 
 section h1 {
@@ -155,8 +159,9 @@ section p {
     margin-top: 50px;
 }
 
-.whatsapp-btn, .insta-btn {
+.whatsapp-btn {
     display: inline-block;
+    background-color: #25D366;
     color: white;
     padding: 10px 20px;
     font-size: 18px;
@@ -167,16 +172,21 @@ section p {
     transition: background-color 0.3s ease;
 }
 
-.whatsapp-btn {
-    background-color: #25D366;
-}
-
 .whatsapp-btn:hover {
     background-color: #128C7E;
 }
 
 .insta-btn {
+    display: inline-block;
     background-color: #ec44bf;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .insta-btn:hover {
@@ -184,99 +194,73 @@ section p {
 }
 
 /* Media Queries para Responsividade */
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column; /* Muda a direção do layout da navbar */
+        align-items: center; /* Centraliza os itens da navbar */
+    }
+
     .logo {
-        flex: 30%;
-        margin-left: 5%;
+        margin: 10px 0; /* Adiciona um espaçamento vertical */
+        flex: 100%; /* Faz o logo ocupar toda a largura */
     }
 
     .menu {
-        flex: 70%;
+        text-align: center; /* Centraliza os itens do menu */
+        padding: 0; /* Remove padding */
+        flex: 100%; /* Faz o menu ocupar toda a largura */
+    }
+
+    .menu a {
+        display: block; /* Faz os links ocuparem toda a largura disponível */
+        padding: 10px 0; /* Aumenta o padding vertical */
     }
 
     .corpo {
-        flex-direction: column;
+        flex-direction: column; /* Muda a direção do layout */
+        padding: 20px; /* Adiciona um padding interno */
     }
 
-    .corpinho, .img-corpinho {
-        flex: 100%;
-        margin-left: 0;
-        margin-right: 0;
+    .corpinho {
+        flex: 100%; /* Faz com que o bloco ocupe toda a largura */
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-right: 0; /* Remove a margem direita */
+        text-align: center; /* Centraliza o texto */
     }
 
-    section {
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .navBar {
-        flex-direction: column;
-    }
-
-    .menu {
-        text-align: center;
-    }
-
-    .logo {
-        margin-left: 0;
+    .img-corpinho {
+        flex: 100%; /* Faz a imagem ocupar toda a largura */
+        margin: 20px 0; /* Adiciona margem vertical */
+        text-align: center; /* Centraliza a imagem */
     }
 
     section {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-    .titulo {
-        font-size: 50px;
-    }
-
-    .descricao {
-        font-size: 25px;
+        margin: 10px; /* Reduz margens em seções */
+        padding: 10px; /* Adiciona padding em seções */
+        height: auto; /* Ajusta a altura */
     }
 }
 
 @media (max-width: 480px) {
-    .navBar {
-        padding: 10px 0; /* Adiciona espaço extra em cima e embaixo */
-    }
-
     .menu a {
-        font-size: 16px;
-        padding: 15px 10px;
+        font-size: 16px; /* Reduz o tamanho da fonte dos links do menu */
+        padding: 15px 10px; /* Ajusta o padding */
     }
 
     .logo h1 {
-        font-size: 28px;
+        font-size: 24px; /* Reduz o tamanho da fonte do logo */
     }
 
     .corpinho h2 {
-        font-size: 30px;
+        font-size: 24px; /* Reduz o tamanho do h2 */
     }
 
     .p {
-        font-size: 20px;
+        font-size: 16px; /* Reduz o tamanho do texto parágrafo */
     }
 
     .whatsapp-btn, .insta-btn {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
-
-    section h1 {
-        font-size: 30px; /* Reduz o tamanho do título em telas pequenas */
-    }
-
-    section p {
-        font-size: 18px; /* Reduz o tamanho do parágrafo em telas pequenas */
-        margin-top: 30px; /* Ajusta o espaço em cima do texto */
-    }
-
-    .titulo {
-        font-size: 40px; /* Reduz o tamanho do título principal */
-    }
-
-    .descricao {
-        font-size: 20px; /* Reduz o tamanho da descrição */
+        font-size: 14px; /* Reduz o tamanho da fonte dos botões */
+        padding: 8px 10px; /* Ajusta o padding */
     }
 }
