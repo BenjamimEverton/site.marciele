@@ -82,6 +82,7 @@ body {
     text-align: center;
     font-family: "Playfair Display", serif;
     color: #FA8072;
+    border: 1px solid #FA8072;
 }
 
 .corpinho h2 {
