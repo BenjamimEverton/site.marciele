@@ -28,7 +28,7 @@ body {
     font-family: "Playfair Display", serif;
     color: white;
     font-size: 36px;
-    font-weight: 900; /* Corrigido para 900 */
+    font-weight: 900; 
     text-shadow: 1px 1px 3px;
 }
 
@@ -58,7 +58,7 @@ body {
     margin-left: 5%;
 }
 
-#botao:hover { /* Corrigido o seletor */
+#botao:hover {
     border: none;
     background: #FA8072;
 }
@@ -104,12 +104,7 @@ body {
     font-size: 25px;
 }
 
-.sobre {
-    height: 700px;
-    background: linear-gradient(to bottom right, rgb(247, 192, 192), rgb(240, 130, 130));
-}
-
-.contato {
+.sobre, .contato {
     height: 700px;
     background: linear-gradient(to bottom right, rgb(247, 192, 192), rgb(240, 130, 130));
 }
@@ -160,9 +155,8 @@ section p {
     margin-top: 50px;
 }
 
-.whatsapp-btn {
+.whatsapp-btn, .insta-btn {
     display: inline-block;
-    background-color: #25D366;
     color: white;
     padding: 10px 20px;
     font-size: 18px;
@@ -171,6 +165,10 @@ section p {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
 }
 
 .whatsapp-btn:hover {
@@ -178,16 +176,7 @@ section p {
 }
 
 .insta-btn {
-    display: inline-block;
     background-color: #ec44bf;
-    color: white;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
 }
 
 .insta-btn:hover {
@@ -197,7 +186,7 @@ section p {
 /* Media Queries para Responsividade */
 @media (max-width: 1200px) {
     .logo {
-        flex: 30%; /* Ajusta o logo em telas menores */
+        flex: 30%;
         margin-left: 5%;
     }
 
@@ -206,67 +195,88 @@ section p {
     }
 
     .corpo {
-        flex-direction: column; /* Muda a direção do layout */
+        flex-direction: column;
     }
 
     .corpinho, .img-corpinho {
-        flex: 100%; /* Faz com que cada bloco ocupe toda a largura */
-        margin-left: 0; /* Remove a margem esquerda */
-        margin-right: 0; /* Remove a margem direita */
+        flex: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     section {
-        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+        height: auto;
     }
 }
 
 @media (max-width: 768px) {
     .navBar {
-        flex-direction: column; /* Muda a direção do layout da navbar */
+        flex-direction: column;
     }
 
     .menu {
-        text-align: center; /* Centraliza os itens do menu */
+        text-align: center;
     }
 
     .logo {
-        margin-left: 0; /* Remove a margem esquerda no logo */
+        margin-left: 0;
     }
 
     section {
-        margin-left: 2%; /* Ajusta as margens em telas menores */
+        margin-left: 2%;
         margin-right: 2%;
     }
 
     .titulo {
-        font-size: 50px; /* Reduz o tamanho da fonte em telas menores */
+        font-size: 50px;
     }
 
     .descricao {
-        font-size: 25px; /* Reduz o tamanho da fonte em telas menores */
+        font-size: 25px;
     }
 }
 
 @media (max-width: 480px) {
+    .navBar {
+        padding: 10px 0; /* Adiciona espaço extra em cima e embaixo */
+    }
+
     .menu a {
-        font-size: 16px; /* Reduz o tamanho da fonte dos links do menu */
-        padding: 15px 10px; /* Ajusta o padding */
+        font-size: 16px;
+        padding: 15px 10px;
     }
 
     .logo h1 {
-        font-size: 28px; /* Reduz o tamanho da fonte do logo */
+        font-size: 28px;
     }
 
     .corpinho h2 {
-        font-size: 30px; /* Reduz o tamanho do h2 */
+        font-size: 30px;
     }
 
     .p {
-        font-size: 20px; /* Reduz o tamanho do texto parágrafo */
+        font-size: 20px;
     }
 
     .whatsapp-btn, .insta-btn {
-        font-size: 16px; /* Reduz o tamanho da fonte dos botões */
-        padding: 8px 15px; /* Ajusta o padding */
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    section h1 {
+        font-size: 30px; /* Reduz o tamanho do título em telas pequenas */
+    }
+
+    section p {
+        font-size: 18px; /* Reduz o tamanho do parágrafo em telas pequenas */
+        margin-top: 30px; /* Ajusta o espaço em cima do texto */
+    }
+
+    .titulo {
+        font-size: 40px; /* Reduz o tamanho do título principal */
+    }
+
+    .descricao {
+        font-size: 20px; /* Reduz o tamanho da descrição */
     }
 }
